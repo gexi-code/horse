@@ -1,0 +1,95 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>باشگاه سوارکاری ...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="wrap">
+        <a href="#top" class="brand">
+          <span class="brand-mark">اَ</span>
+          <span>
+            <span class="brand-name" style="display: block"
+              >باشگاه سوارکاری </span
+            >
+            <span class="brand-sub"> ... Equestrian Club — Est. 1391</span>
+          </span>
+        </a>
+        <nav class="primary">
+          <ul>
+            <li><a href="#about" class="nav-link">درباره ما</a></li>
+            <li><a href="classes.html" class="nav-link">دوره‌ها</a></li>
+            <li><a href="coaches.html" class="nav-link">مربیان</a></li>
+            <li><a href="members.html" class="nav-link">عضویت</a></li>
+            <li><a href="contact.html" class="nav-link">تماس</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="nav-cta">ثبت‌نام آزمایشی</a>
+        <button class="burger" id="burger" aria-label="منو">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+{% block content %}
+{% endblock %}
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span
+              class="brand-name"
+              style="font-size: 20px; color: var(--cream)"
+              >باشگاه سوارکاری ... </span
+            >
+            <p>
+              از سال ۱۳۹۱، خانهٔ سوارکاران آماتور و حرفه‌ای در دامنهٔ البرز.
+            </p>
+          </div>
+          <div>
+            <h5>دوره‌ها</h5>
+            <ul>
+              <li><a href="classes.html">سوارکاری کودکان</a></li>
+              <li><a href="classes.html">درساژ رقابتی</a></li>
+              <li><a href="classes.html">پرش با مانع</a></li>
+              <li><a href="classes.html">اسب‌درمانی</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>باشگاه</h5>
+            <ul>
+              <li><a href="#about">دربارهٔ ما</a></li>
+              <li><a href="coaches.html">مربیان</a></li>
+              <li><a href="members.html">عضویت</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>شبکه‌های اجتماعی</h5>
+            <ul>
+              <li><a href="#">اینستاگرام</a></li>
+              <li><a href="#">تلگرام</a></li>
+              <li><a href="#">یوتیوب</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© ۱۴۰۵ باشگاه سوارکاری .... تمامی حقوق محفوظ است.</span>
+          <span>طراحی و توسعه با ❤ برای عاشقان اسب</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

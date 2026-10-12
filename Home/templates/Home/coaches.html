@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">درباره ما</a>
+  <a href="classes.html">دوره‌ها</a>
+  <a href="#instructors">مربیان</a>
+  <a href="members.html">عضویت</a>
+  <a href="contact.html">تماس</a>
+</div>
+
+
+<section id="instructors">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>مربیانی که مسیر شما را طراحی می‌کنند</h2>
+      <p>هر مربی حداکثر مسئولیت ۶ سوارکار هم‌زمان را برعهده دارد تا آموزش کاملاً فردی بماند.</p>
+    </div>
+    <div class="instructors-row reveal" id="instructorsRow"></div>
+  </div>
+</section>
+
+
+<section class="band tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>باشگاه در یک نگاه</h2>
+      <p style="opacity:.85;">آماری که نشان می‌دهد ... بیشتر از یک مکان تمرین است.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="stat-grid reveal">
+      <div class="stat-cell"><b>۳۴</b><span>مسابقهٔ کشوری با حضور اعضای باشگاه</span></div>
+      <div class="stat-cell"><b>۱۲</b><span>هکتار چراگاه و میدان تمرین</span></div>
+      <div class="stat-cell"><b>۲۸</b><span>اسب تحت مراقبت دائمی</span></div>
+      <div class="stat-cell"><b>۹۶٪</b><span>رضایت اعضا در نظرسنجی سالانه</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}

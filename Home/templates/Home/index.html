@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block content%}
+
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">درباره ما</a>
+      <a href="classes.html">دوره‌ها</a>
+      <a href="coaches.html">مربیان</a>
+      <a href="members.html">عضویت</a>
+      <a href="contact.html">تماس</a>
+    </div>
+
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow hero-eyebrow">
+            <span class="letter">A</span> نقطهٔ ورود به میدان
+          </div>
+          <h1>سوارکاری را از نقطهٔ <em>A</em> تا <em>C</em> با ما تجربه کن</h1>
+          <p class="lead">
+            ۱۲ هکتار چراگاه، ۲۸ اسب آموزش‌دیده و مربیانی با مدرک فدراسیون
+            سوارکاری؛ از اولین سوارشدن کودکان تا آماده‌سازی برای مسابقات درساژ و
+            پرش با مانع.
+          </p>
+          <div class="hero-actions">
+            <a href="#membership" class="btn btn-primary"
+              >مشاهدهٔ طرح‌های عضویت</a
+            >
+            <a href="#programs" class="btn btn-ghost">دوره‌های آموزشی</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <b id="statYears">0</b><span>سال سابقه</span>
+            </div>
+            <div class="stat">
+              <b id="statHorses">0</b><span>اسب آموزش‌دیده</span>
+            </div>
+            <div class="stat">
+              <b id="statMembers">0</b><span>عضو فعال</span>
+            </div>
+            <div class="stat">
+              <b id="statHectare">0</b><span>هکتار میدان و چراگاه</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arena-wrap">
+          <svg viewBox="0 0 400 500" fill="none">
+       
+            <rect
+              x="60"
+              y="40"
+              width="280"
+              height="420"
+              rx="4"
+              class="arena-track"
+            />
+            <!-- centerline -->
+            <line
+              x1="200"
+              y1="40"
+              x2="200"
+              y2="460"
+              stroke="var(--ink)"
+              stroke-width="1"
+              stroke-dasharray="2 8"
+              opacity=".5"
+            />
+            <!-- letter points -->
+            <g class="arena-letter-label" text-anchor="middle">
+              <text x="200" y="34">A</text>
+              <text x="200" y="474">C</text>
+              <text x="48" y="130">K</text>
+              <text x="48" y="255">E</text>
+              <text x="48" y="378">H</text>
+              <text x="352" y="130">F</text>
+              <text x="352" y="255">B</text>
+              <text x="352" y="378">M</text>
+              <text x="130" y="34" opacity="0">V</text>
+            </g>
+            <circle cx="200" cy="40" r="3" fill="var(--ink)" />
+            <circle cx="200" cy="460" r="3" fill="var(--ink)" />
+            <circle cx="60" cy="130" r="3" fill="var(--ink)" />
+            <circle cx="60" cy="255" r="3" fill="var(--ink)" />
+            <circle cx="60" cy="378" r="3" fill="var(--ink)" />
+            <circle cx="340" cy="130" r="3" fill="var(--ink)" />
+            <circle cx="340" cy="255" r="3" fill="var(--ink)" />
+            <circle cx="340" cy="378" r="3" fill="var(--ink)" />
+
+            <!-- animated path of a rider tracing the arena -->
+            <path
+              id="riderPath"
+              d="M200,40 L60,130 L60,255 L60,378 L200,460 L340,378 L340,255 L340,130 Z"
+              fill="none"
+              stroke="none"
+            />
+            <circle r="6" class="arena-rider">
+              <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#riderPath" />
+              </animateMotion>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-visual reveal">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="gr1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3D5A36" />
+                <stop offset="1" stop-color="#1E2F19" />
+              </linearGradient>
+            </defs>
+            <rect width="400" height="500" fill="url(#gr1)" />
+            <!-- horse silhouette -->
+            <g transform="translate(40,150)" opacity="0.92">
+              <path
+                fill="#F3EAD9"
+                d="M300 90c-8-22-26-38-49-44l-6-24c-2-8-9-14-17-14-5 0-10 2-13 6l-14 16c-16-10-35-15-55-13-40 4-72 33-80 72l-6 30-25 8c-6 2-10 8-9 15 1 6 6 10 12 10h20l4 34c1 9 9 15 18 14 8-1 14-8 14-16l-2-30h58l10 46c2 9 10 15 19 13 8-2 13-10 12-18l-9-42 40-6c22-4 40-19 48-40l13 2c8 1 15-4 16-12 1-7-3-13-9-15z"
+              />
+              <circle cx="70" cy="86" r="6" fill="#1E2F19" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="about-copy reveal">
+          <div class="eyebrow"><span class="dot"></span> دربارهٔ باشگاه</div>
+          <h2 style="font-size: 36px; margin: 18px 0 20px">
+            جایی که رابطهٔ بین سوارکار و اسب شکل می‌گیرد
+          </h2>
+          <p>
+            باشگاه سوارکاری ... از سال ۱۳۹۱ در دامنهٔ کوه‌های البرز فعالیت
+            می‌کند. فلسفهٔ ما ساده است: سوارکاری خوب از شناخت اسب شروع می‌شود،
+            نه از زین‌کردن آن. به همین دلیل هر دوره با آموزش رفتارشناسی و مراقبت
+            از اسب آغاز می‌شود.
+          </p>
+          <p>
+            میدان اصلی ما استاندارد فدراسیون بین‌المللی سوارکاری (۲۰ در ۶۰ متر)
+            است و نقاط حرفی روی آن دقیقاً همان مسیری‌ست که سوارکاران در مسابقات
+            درساژ طی می‌کنند.
+          </p>
+
+          <ul class="about-list">
+            <li>
+              <span class="letter">A</span> ورود و استقبال — ارزیابی رایگان سطح
+              سوارکار در اولین جلسه
+            </li>
+            <li>
+              <span class="letter">E</span> آموزش پایه — آشنایی با اسب، مراقبت و
+              زین‌کردن
+            </li>
+            <li>
+              <span class="letter">C</span> پیشرفت — آمادگی برای مسابقات درساژ و
+              پرش با مانع
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAMS ================= -->
+
+    <!-- ================= FOOTER ================= -->
+
+{% endblock %}
